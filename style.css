@@ -9,27 +9,47 @@
     background-repeat: no-repeat;
     background-size: max(1200px, 100vw);
     background-image: url("./Assets/main_back.jpg");
-    height: 70vh;
+    height: 700px;
     position: relative;
 }
 
 .main .box {
     position: absolute;
-    height: 78vh;
+    height: 700px;
     width: 100%;
-    opacity: 0.69;
+    opacity: 0.77;
     top: 0;
     background-color: black;
 }
 
 nav {
-    padding-top: 15px;
+    padding: 10px 0px;
     display: flex;
-    max-width: 60vw;
+    max-width: 70vw;
     margin: auto;
     justify-content: space-between;
     align-items: center;
-    height: 62px;
+    height: 100px;
+}
+
+nav div{
+    display: flex;
+    gap: 25px;
+}
+
+nav div button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 4px;
+    width: 126px;
+    height: 32px;
+    border: 0.1px solid transparent;
+}
+
+nav div button img{
+    height: 16px;
+    width: 16px;
 }
 
 nav img {
@@ -50,7 +70,7 @@ body {
 }
 
 .hero {
-    padding: 0 30px;
+    padding: 0px 30px;
     text-align: center;
     height: calc(100% - 100px);
     display: flex;
@@ -59,11 +79,11 @@ body {
     flex-direction: column;
     color: white;
     position: relative;
-    gap: 23px;
+    gap: 11px;
     z-index: 10;
 }
 
-.hero> :nth-child(1){
+.hero> :nth-child(1) {
     font-weight: 900;
     font-size: 48px;
     text-align: center;
@@ -82,18 +102,20 @@ body {
 }
 
 .separation {
+    position: relative;
     z-index: 20;
     height: 7px;
-    background-color: rgb(151, 149, 149);
+    background-color: rgb(41, 41, 41);
 }
 
-.hero-buttons{
+.hero-buttons {
     display: flex;
     align-items: center;
     justify-content: center;
     gap: 16px;
 
 }
+
 .btn {
     color: white;
     padding: 3px 8px;
@@ -103,6 +125,7 @@ body {
     border-radius: 4px;
     cursor: pointer;
 }
+
 .btn-red {
     background-color: red;
     padding: 3px 24px;
@@ -119,14 +142,15 @@ body {
 .main input {
     color: white;
     font-weight: 400;
-    background-color: rgba(23,23,23,0.7);
+    background-color: rgba(23, 23, 23, 0.7);
     border: 0.1px solid white;
-    padding:12px 115px 12px 14px;
+    padding: 12px 115px 12px 14px;
     font-size: 12px;
     border-radius: 4px;
 }
 
-.first{
+.first {
+    height: 578px;
     display: flex;
     justify-content: center;
     max-width: 70vw;
@@ -134,39 +158,137 @@ body {
     color: white;
     align-items: center;
 }
-.secimg{
+
+.secimg {
     position: relative;
     top: 0;
 }
 
-.secimg img{
+.secimg img {
     width: 30vw;
     position: relative;
-    z-index: 10 ;
+    z-index: 10;
 }
 
-.secimg video{
+.secimg video {
     width: 420px;
-    position:absolute;
+    position: absolute;
     top: 51px;
     right: 0;
 }
 
-.first div{
+.first div {
     display: flex;
     flex-direction: column;
 }
 
-.first div :first-child{
+.first div :first-child {
     font-size: 48px;
     font-weight: 700;
 }
 
-.first div :nth-child(2){
+.first div :nth-child(2) {
     font-size: 24px;
     font-weight: 400;
 }
 
-.second:nth-child(2) span{
+.second:nth-child(2) span {
     color: white;
+}
+
+.third .secimg video {
+    width: 300px;
+    position: absolute;
+    right: 90px;
+}
+
+.faq {
+    background-color: black;
+    color: white;
+    padding: 72px;
+    font-family: "Netflix Sans", "Helvetica Neue", "Segoe UI", Roboto, Ubuntu, sans-serif;
+}
+
+.faq h2 {
+    text-align: center;
+    font-size: 48px;
+    font-weight: 900;
+    color: white;
+}
+
+.faq .faqbox {
+    font-size: 24px;
+    font-weight: 400;
+    display: flex;
+    padding: 22px;
+    max-width: 73vw;
+    margin: 8px auto;
+    justify-content: space-between;
+    background-color: #2d2d2d;
+    cursor: pointer;
+    opacity: 0.8;
+}
+
+.faqbox:hover {
+    opacity: 1;
+    background-color: rgb(63, 63, 63);
+}
+
+.faqbox svg {
+    filter: invert(1);
+}
+
+footer {
+    color: white;
+    padding: 34px;
+}
+
+.footer {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    color: white;
+    max-width: 60vw;
+    margin: auto;
+    line-height: 34px;
+}
+
+.footer-item {
+    color: white;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.footer a {
+    font-size: 14px;
+    color: white;
+}
+
+footer .q {
+    margin-left: 240px;
+    padding: 34px;
+    text-align: start;
+}
+
+.email {
+    padding: 30px;
+    max-width: 60vw;
+    margin: auto;
+    text-align: center;
+}
+
+.email div{
+    font-size: 20px;
+    font-weight: 400;
+    margin-bottom: 30px;
+}
+
+.email input {
+    color: white;
+    font-weight: 400;
+    background-color: rgba(23, 23, 23, 0.7);
+    border: 0.1px solid white;
+    padding: 12px 115px 12px 14px;
+    font-size: 12px;
+    border-radius: 4px;
 }
